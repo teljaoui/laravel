@@ -7,35 +7,16 @@
     <title>Liste des pensions</title>
 </head>
 <body>
-   <div class="container m-5">
+   <div class="container m-5" style="margin-top:15%">
+        <h2 class="text-center">Recherche de retraités</h2>
         <form action="{{ route('pensions.search') }}" method="POST">
              @csrf
-             <div style="margin-block:30px; display:flex;">
-                <input type="text" class="form-control" style="width:30%" name="matricule" placeholder="Matricule">
+             <div style="margin-block:30px;  display:flex;" class="text-center">
+                <input type="text" class="form-control" style="width:90%" name="matricule" placeholder="Matricule">
                 <button class="btn btn-primary" type="submit">Rechercher</button>
              </div>
          </form>
-        <h2 class="text-center">Liste des retraités</h2>
-        <table border="1" class="table">
-            <tr>
-                <th>Matricule</th>
-                <th>Numéro d'affiliation</th>
-                <th>Type de pension</th>
-                <th>Nom et prénom</th>
-                <th>Date d'effet</th>
-                <th>Mois d'envoi</th>
-            </tr>
-            @foreach($pensions as $pension)
-                <tr>
-                    <td>{{ $pension->matricule }}</td>
-                    <td>{{ $pension->num_affiliation }}</td>
-                    <td>{{ $pension->type_pension }}</td>
-                    <td>{{ $pension->nom_et_prenom }}</td>
-                    <td>{{ $pension->date_effet }}</td>
-                    <td>{{ $pension->mois_envoi }}</td>
-                </tr>   
-            @endforeach
-        </table>
+        
    </div>
 </body>
 </html>

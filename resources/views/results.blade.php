@@ -8,9 +8,9 @@
     <title>Résultats de la recherche</title>
 </head>
 <body>
-   <div class="container m-5">
+   <div class="container" style="margin-top:30px">
         <h2 class="text-center">Résultats de la recherche</h2>
-        <table border="1" class="table">
+        <table  class="table table-bordered">
             <tr>
                 <th>Matricule</th>
                 <th>Numéro d'affiliation</th>
@@ -30,7 +30,7 @@
                 </tr>   
             @endforeach
         </table>
-        <a href="/home"><i class="fa-sharp fa-solid fa-arrow-left"></i> Liste des retraités</a>
+        <a href="/home"><i class="fa-sharp fa-solid fa-arrow-left"></i> Recherche de retraités</a>
    </div>
 </body>
 </html>
